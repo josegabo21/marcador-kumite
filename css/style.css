@@ -16,24 +16,24 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 90%; /* Limitar el ancho total */
-    position: relative; /* Para posicionar el temporizador y botones */
+    max-width: 120%; 
+    position: relative; 
 }
 
 .jugador {
     padding: 20px;
     border-radius: 10px;
-    width: 50%; /* Cada jugador ocupa la mitad del contenedor */
+    width: 50%; 
     text-align: center;
-    position: relative; /* Para que el temporizador se posicione correctamente */
+    position: relative; 
 }
 
 .jugador.ao {
-    background-color: #005A8B; /* Azul para AO */
+    background-color: #005A8B; 
 }
 
 .jugador.aka {
-    background-color: #D32F2F; /* Rojo para AKA */
+    background-color: #D32F2F; 
 }
 
 .puntaje {
@@ -42,59 +42,59 @@ body {
 
 .contenedor-botones {
     display: flex;
-    flex-direction: column; /* Asegura que los botones estén uno debajo del otro */
-    align-items: center; /* Centra los botones horizontalmente */
-    margin-top: 10px; /* Espacio entre el puntaje y los botones */
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 10px; 
 }
 
 .contenedor-botones button {
-    width: 150px; /* Hacer que todos los botones ocupen el mismo ancho */
-    padding: 10px; /* Espaciado interno para los botones */
-    margin: 5px 0; /* Espacio entre los botones */
+    width: 150px; 
+    padding: 10px; 
+    margin: 5px 0; 
 }
 
 .faltas {
     font-size: 20px;
-    margin-top: 60px; /* Espacio entre el puntaje y las faltas */
+    margin-top: 60px; 
 }
 
 .contenedor-faltas {
     font-size: 20px;
-    margin-top: 40px; /* Espacio entre el puntaje y las faltas */
+    margin-top: 40px;
 }
 
 .contenedor-temporizador {
-    position: absolute; /* Posicionar el temporizador y botones */
-    top: 40%; /* Centrar verticalmente */
-    left: 50%; /* Centrar horizontalmente */
-    transform: translate(-50%, -50%); /* Ajustar para centrar */
-    z-index: 10; /* Asegurarse de que esté por encima de los cuadros */
-    text-align: center; /* Centrar el texto */
-    padding: 20px; /* Espaciado interno */
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente para destacar */
-    border-radius: 10px; /* Bordes redondeados */
+    position: absolute; 
+    top: 40%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 10; 
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 10px; 
 }
 
 .categoria-container {
-    position: absolute; /* Posicionar el temporizador y botones */
-    top: 84%; /* Centrar verticalmente */
-    left: 50%; /* Centrar horizontalmente */
-    transform: translate(-50%, -50%); /* Ajustar para centrar */
-    z-index: 10; /* Asegurarse de que esté por encima de los cuadros */
-    text-align: center; /* Centrar el texto */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 10px; /* Bordes redondeados */
+    position: absolute;
+    top: 84%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; 
+    text-align: center; 
+    padding: 20px; 
+    border-radius: 10px; 
 }
 
 .categoria2-container {
-    position: absolute; /* Posicionar el temporizador y botones */
-    top: 95%; /* Centrar verticalmente */
-    left: 50%; /* Centrar horizontalmente */
-    transform: translate(-50%, -50%); /* Ajustar para centrar */
-    z-index: 10; /* Asegurarse de que esté por encima de los cuadros */
-    text-align: center; /* Centrar el texto */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 10px; /* Bordes redondeados */
+    position: absolute; 
+    top: 95%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 10; 
+    text-align: center; 
+    padding: 20px; 
+    border-radius: 10px; 
 }
 
 .temporizador {
@@ -109,22 +109,22 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: white; /* Botones en blanco */
-    color: #0076A8; /* Texto en azul */
-    transition: background-color 0.3s; /* Transición suave */
+    background-color: white; 
+    color: #0076A8;
+    transition: background-color 0.3s; 
 }
 
 button:hover {
-    background-color: #0076A8; /* Cambia a azul al pasar el mouse */
-    color: white; /* Texto en blanco al pasar el mouse */
+    background-color: #0076A8; 
+    color: white; 
 }
 
 #iniciar {
-    background-color: #4CAF50; /* Verde */
+    background-color: #4CAF50; 
     color: white;
 }
 
 #detener {
-    background-color: #F44336; /* Rojo */
+    background-color: #F44336; 
     color: white;
 }
