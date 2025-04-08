@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcador Kumite</title>
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+    <h1>Marcador Kumite</h1>
+
+    <div class="contenedor">
+        <div class="jugador ao">
+            <h2>AO</h2>
+            <div class="puntaje" id="puntajeAo">0</div>
+            <div class="contenedor-botones">
+                <button onclick="incrementarPuntaje('ao', 'ippon')">Ippon</button>
+                <button onclick="incrementarPuntaje('ao', 'waza')">Waza-ari</button>
+                <button onclick="incrementarPuntaje('ao', 'yuko')">Yuko</button>
+                <button onclick="decrementarPuntaje('ao')">Resta Punto -1</button>
+                <div class="senshu-container">
+                    <span>Selecciona Senshu:</span><br>
+                    <label>
+                        <input type="radio" name="senshu" id="senshuAo" value="ao" onclick="establecerSenshu('ao')"> AO
+                    </label>
+                </div>
+            </div>
+            <div class="faltas" id="faltasAo">Faltas: 0</div>
+            <br>
+            <div class="contenedor-faltas">
+                <label>
+                    <input type="radio" name="foulAo" value="C1" onclick="incrementarFalta('ao', 'C1')"> C1
+                </label>
+                <label>
+                    <input type="radio" name="foulAo" value="C2" onclick="incrementarFalta('ao', 'C2')"> C2
+                </label>
+                <label>
+                    <input type="radio" name="foulAo" value="C3" onclick="incrementarFalta('ao', 'C3')"> C3
+                </label>
+                <label>
+                    <input type="radio" name="foulAo" value="HC" onclick="incrementarFalta('ao', 'HC')"> HC
+                </label>
+                <label>
+                    <input type="radio" name="foulAo" value="H" onclick="incrementarFalta('ao', 'H')"> H
+                </label>
+            </div>
+            <div class="contenedor-faltas">
+                <label>
+                    <input type="checkbox" name="foulAo" value="Hantei" onclick="seleccionarFalta('ao', 'Hantei', 0)"> Hantei 
+                </label>
+                <label>
+                    <input type="checkbox" name="foulAo" value="Kiken" onclick="seleccionarFalta('ao', 'Kiken', 0)"> Kiken 
+                </label>
+                <label>
+                    <input type="checkbox" name="foulAo" value="Shikaku" onclick="seleccionarFalta('ao', 'Shikaku', 0)"> Shikaku 
+                </label>
+            </div>
+        </div>
+        
+        <div class="jugador aka">
+            <h2>AKA</h2>
+            <div class="puntaje" id="puntajeAka">0</div>
+            <div class="contenedor-botones">
+                <button onclick="incrementarPuntaje('aka', 'ippon')">Ippon</button>
+                <button onclick="incrementarPuntaje('aka', 'waza')">Waza-ari</button>
+                <button onclick="incrementarPuntaje('aka', 'yuko')">Yuko</button>
+                <button onclick="decrementarPuntaje('aka')">Resta Punto -1</button>
+                <div class="senshu-container">
+                    <span>Selecciona Senshu:</span><br>
+                    <label>
+                        <input type="radio" name="senshu" id="senshuAka" value="aka" onclick="establecerSenshu('aka')"> AKA
+                    </label>
+                </div>
+            </div>
+            <div class="faltas" id="faltasAka">Faltas: 0</div>
+            <br>
+            <div class="contenedor-faltas">
+                <label>
+                    <input type="radio" name="foulAka" value="C1" onclick="incrementarFalta('aka', 'C1')"> C1
+                </label>
+                <label>
+                    <input type="radio" name="foulAka" value="C2" onclick="incrementarFalta('aka', 'C2')"> C2
+                </label>
+                <label>
+                    <input type="radio" name="foulAka" value="C3" onclick="incrementarFalta('aka', 'C3')"> C3
+                </label>
+                <label>
+                    <input type="radio" name="foulAka" value="HC" onclick="incrementarFalta('aka', 'HC')"> HC
+                </label>
+                <label>
+                    <input type="radio" name="foulAka" value="H" onclick="incrementarFalta('aka', 'H')"> H
+                </label>
+
+                <div class="contenedor-faltas">
+                    <label>
+                        <input type="checkbox" name="foulAka" value="Hantei" onclick="seleccionarFalta('aka', 'Hantei', 0)"> Hantei 
+                    </label>
+                    <label>
+                        <input type="checkbox" name="foulAka" value="Kiken" onclick="seleccionarFalta('aka', 'Kiken', 0)"> Kiken 
+                    </label>
+    
+                    <label>
+                        <input type="checkbox" name="foulAka" value="Shikaku" onclick="seleccionarFalta('aka', 'Shikaku', 0)"> Shikaku 
+                    </label>
+                </div>
+            </div>
+    
+            </div>
+           
+        <div class="categoria-container">
+            <h3>Categoria 1</h3>
+        </div>
+
+        <div class="categoria2-container">
+            <h3>Categoria 2</h3>
+        </div>
+
+        <div class="contenedor-temporizador">
+            <div class="temporizador" id="temporizador">00:00</div>
+            <button id="iniciar" onclick="iniciarTemporizador()">Iniciar</button>
+            <button id="detener" onclick="detenerTemporizador()">Detener</button>
+            <button id="reiniciar" onclick="reiniciarJuego()">Reiniciar</button>
+
+            <div class="categoria">
+                <label for="categoriaSelect">Selecciona la categoría:</label>
+                <select id="categoriaSelect" onchange="establecerCategoria(this.value)">
+                    <option value="">--Seleccionar--</option>
+                    <option value="infantil">Infantil (1:00 min)</option>
+                    <option value="juvenil">Juvenil (1:30 min)</option>
+                    <option value="cadete">Cadete (2:00 min)</option>
+                    <option value="adulto">Adulto (3:00 min)</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    </body>
+</html>

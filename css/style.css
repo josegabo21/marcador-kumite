@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.categoria {
+    margin-bottom: 20px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 90%; /* Limitar el ancho total */
+    position: relative; /* Para posicionar el temporizador y botones */
+}
+
+.jugador {
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%; /* Cada jugador ocupa la mitad del contenedor */
+    text-align: center;
+    position: relative; /* Para que el temporizador se posicione correctamente */
+}
+
+.jugador.ao {
+    background-color: #005A8B; /* Azul para AO */
+}
+
+.jugador.aka {
+    background-color: #D32F2F; /* Rojo para AKA */
+}
+
+.puntaje {
+    font-size: 50px;
+}
+
+.contenedor-botones {
+    display: flex;
+    flex-direction: column; /* Asegura que los botones estén uno debajo del otro */
+    align-items: center; /* Centra los botones horizontalmente */
+    margin-top: 10px; /* Espacio entre el puntaje y los botones */
+}
+
+.contenedor-botones button {
+    width: 150px; /* Hacer que todos los botones ocupen el mismo ancho */
+    padding: 10px; /* Espaciado interno para los botones */
+    margin: 5px 0; /* Espacio entre los botones */
+}
+
+.faltas {
+    font-size: 20px;
+    margin-top: 60px; /* Espacio entre el puntaje y las faltas */
+}
+
+.contenedor-faltas {
+    font-size: 20px;
+    margin-top: 40px; /* Espacio entre el puntaje y las faltas */
+}
+
+.contenedor-temporizador {
+    position: absolute; /* Posicionar el temporizador y botones */
+    top: 40%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Ajustar para centrar */
+    z-index: 10; /* Asegurarse de que esté por encima de los cuadros */
+    text-align: center; /* Centrar el texto */
+    padding: 20px; /* Espaciado interno */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente para destacar */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.categoria-container {
+    position: absolute; /* Posicionar el temporizador y botones */
+    top: 84%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Ajustar para centrar */
+    z-index: 10; /* Asegurarse de que esté por encima de los cuadros */
+    text-align: center; /* Centrar el texto */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.categoria2-container {
+    position: absolute; /* Posicionar el temporizador y botones */
+    top: 95%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Ajustar para centrar */
+    z-index: 10; /* Asegurarse de que esté por encima de los cuadros */
+    text-align: center; /* Centrar el texto */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.temporizador {
+    font-size: 60px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white; /* Botones en blanco */
+    color: #0076A8; /* Texto en azul */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+button:hover {
+    background-color: #0076A8; /* Cambia a azul al pasar el mouse */
+    color: white; /* Texto en blanco al pasar el mouse */
+}
+
+#iniciar {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+}
+
+#detener {
+    background-color: #F44336; /* Rojo */
+    color: white;
+}
